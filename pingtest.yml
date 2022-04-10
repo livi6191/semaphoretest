@@ -1,11 +1,4 @@
----
-- hosts: all
-  become: no
-  gather_facts: no
+- hosts:
+    - all
   tasks:
-  - name: "Execute command!"
-    command: whoami
-    register: who
-  - name: "Result"
-    debug:
-      msg: "{{who}}"
+    - action: ping
